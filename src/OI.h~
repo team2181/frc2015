@@ -22,6 +22,8 @@ private:
 	JoystickButton* draggerLU;
 	JoystickButton* draggerRD;
 	JoystickButton* draggerRU;
+	JoystickButton* forkliftDown;
+	JoystickButton* forkliftUp;
 	JoystickButton* forkliftRelease;
 	JoystickButton* forkliftGrab;
 	Joystick* joyDriver;

@@ -37,22 +37,22 @@ void BoxDragger::InitDefaultCommand() {
 
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
-void BoxDragger::setState(int s)
+void BoxDragger::setState(Joystick *joy)
 {
-	switch (s) {
-		case 0:
-			solenoidR->Set(true);
-			break;
-		case 1:
-			solenoidR->Set(false);
-			break;
-		case 2:
-			solenoidL->Set(true);
-			break;
-		case 3:
-			solenoidL->Set(false);
-			break;
-		default:
-			break;
+	if (joy->GetRawButton(6) && !(joy->GetRawButton(8)))
+	{
+		solenoidR->Set(true);
+	}
+	if (joy->GetRawButton(8) && !(joy->GetRawButton(6)))
+	{
+		solenoidR->Set(false);
+	}
+	if (joy->GetRawButton(5) && !(joy->GetRawButton(7)))
+	{
+		solenoidL->Set(true);
+	}
+	if (joy->GetRawButton(7) && !(joy->GetRawButton(5)))
+	{
+		solenoidL->Set(false);
 	}
 }

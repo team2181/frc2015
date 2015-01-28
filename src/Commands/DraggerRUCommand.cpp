@@ -27,7 +27,7 @@ void DraggerRUCommand::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void DraggerRUCommand::Execute() {
-	Robot::boxDragger->setState(0);
+	Robot::boxDragger->solenoidR->Set(true);
 }
 
 // Make this return true when this Command no longer needs to run execute()
