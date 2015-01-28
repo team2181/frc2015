@@ -27,12 +27,7 @@ void BoxDraggerDefaultCommand::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void BoxDraggerDefaultCommand::Execute() {
-	Robot::boxDragger->joyToSolenoid(Robot::oi->getjoyAux());
 
-	/*SmartDashboard::PutBoolean("Joy6", Robot::oi->getjoyDriver()->GetRawButton(6));
-	SmartDashboard::PutBoolean("Joy8", Robot::oi->getjoyDriver()->GetRawButton(8));
-	SmartDashboard::PutBoolean("Joy5", Robot::oi->getjoyDriver()->GetRawButton(5));
-	SmartDashboard::PutBoolean("Joy7", Robot::oi->getjoyDriver()->GetRawButton(7));*/
 }
 
 // Make this return true when this Command no longer needs to run execute()
