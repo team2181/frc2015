@@ -26,7 +26,8 @@ void ForkliftDefaultComand::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void ForkliftDefaultComand::Execute() {
-	Robot::forklift->setMotor(0);
+	Robot::forklift->setHorizontalMotor(0);
+	Robot::forklift->setVerticalMotor(0);
 }
 
 // Make this return true when this Command no longer needs to run execute()

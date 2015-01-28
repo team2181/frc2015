@@ -27,7 +27,7 @@ void ForkliftGrabCommand::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void ForkliftGrabCommand::Execute() {
-	Robot::forklift->setMotor(1);
+	Robot::forklift->setHorizontalMotor(1);
 }
 
 // Make this return true when this Command no longer needs to run execute()

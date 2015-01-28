@@ -9,8 +9,8 @@
 // it from being updated in the future.
 
 
-#ifndef DRAGGERRUCOMMAND_H
-#define DRAGGERRUCOMMAND_H
+#ifndef FORKLIFTDOWNCOMMAND_H
+#define FORKLIFTDOWNCOMMAND_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,9 +21,9 @@
  *
  * @author ExampleAuthor
  */
-class DraggerRUCommand: public Command {
+class ForkliftDownCommand: public Command {
 public:
-	DraggerRUCommand();
+	ForkliftDownCommand();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
