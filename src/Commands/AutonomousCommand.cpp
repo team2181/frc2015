@@ -26,7 +26,14 @@ void AutonomousCommand::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void AutonomousCommand::Execute() {
-	
+	/*if (RobotMap::forkliftPDP->GetCurrent(4) < 2)
+	{
+		Robot::forklift->speedControllerHorizontal->Set(1);
+	}
+	else {
+		Robot::forklift->speedControllerHorizontal->Set(0);
+		Wait(2);
+	}*/
 }
 
 // Make this return true when this Command no longer needs to run execute()

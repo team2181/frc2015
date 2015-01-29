@@ -16,10 +16,6 @@
 #include "Commands/AutonomousCommand.h"
 #include "Commands/BoxDraggerDefaultCommand.h"
 #include "Commands/CompressorDefaultCommand.h"
-#include "Commands/DraggerLDCommand.h"
-#include "Commands/DraggerLUCommand.h"
-#include "Commands/DraggerRDCommand.h"
-#include "Commands/DraggerRUCommand.h"
 #include "Commands/DriveTrainDefaultCommand.h"
 #include "Commands/ForkliftDefaultComand.h"
 #include "Commands/ForkliftDownCommand.h"
@@ -36,14 +32,6 @@ OI::OI() {
 
 	joyAux = new Joystick(1);
 	
-	draggerLD = new JoystickButton(joyAux, 5);
-	draggerLD->WhenPressed(new DraggerLDCommand());
-	draggerLU = new JoystickButton(joyAux, 7);
-	draggerLU->WhenPressed(new DraggerLUCommand());
-	draggerRD = new JoystickButton(joyAux, 6);
-	draggerRD->WhenPressed(new DraggerRDCommand());
-	draggerRU = new JoystickButton(joyAux, 8);
-	draggerRU->WhenPressed(new DraggerRUCommand());
 	forkliftDown = new JoystickButton(joyAux, 2);
 	forkliftDown->WhileHeld(new ForkliftDownCommand());
 	forkliftUp = new JoystickButton(joyAux, 4);
@@ -70,14 +58,6 @@ OI::OI() {
 	SmartDashboard::PutData("ForkliftGrabCommand", new ForkliftGrabCommand());
 
 	SmartDashboard::PutData("ForkliftDefaultComand", new ForkliftDefaultComand());
-
-	SmartDashboard::PutData("DraggerRUCommand", new DraggerRUCommand());
-
-	SmartDashboard::PutData("DraggerRDCommand", new DraggerRDCommand());
-
-	SmartDashboard::PutData("DraggerLUCommand", new DraggerLUCommand());
-
-	SmartDashboard::PutData("DraggerLDCommand", new DraggerLDCommand());
 
 	SmartDashboard::PutData("ForkliftUpCommand", new ForkliftUpCommand());
 
