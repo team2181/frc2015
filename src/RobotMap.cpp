@@ -53,10 +53,10 @@ void RobotMap::init() {
         driveTrainomnidrive->SetSensitivity(0.5);
         driveTrainomnidrive->SetMaxOutput(1.0);
 
-	boxDraggersolenoidR = new Solenoid(1, 0);
+	boxDraggersolenoidR = new Solenoid(1, 5);
 	lw->AddActuator("BoxDragger", "solenoidR", boxDraggersolenoidR);
 	
-	boxDraggersolenoidL = new Solenoid(1, 1);
+	boxDraggersolenoidL = new Solenoid(1, 4);
 	lw->AddActuator("BoxDragger", "solenoidL", boxDraggersolenoidL);
 	
 	pneumaticcomp = new Compressor(1);
