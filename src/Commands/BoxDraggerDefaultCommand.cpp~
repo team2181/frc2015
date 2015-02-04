@@ -27,7 +27,7 @@ void BoxDraggerDefaultCommand::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void BoxDraggerDefaultCommand::Execute() {
-	Robot::boxDragger->setState(Robot::oi->getjoyAux());
+	Robot::boxDragger->setState(Robot::oi->getjoyDriver());
 }
 
 // Make this return true when this Command no longer needs to run execute()

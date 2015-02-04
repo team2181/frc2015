@@ -22,7 +22,6 @@ RobotDrive* RobotMap::driveTrainomnidrive = NULL;
 Solenoid* RobotMap::boxDraggersolenoidR = NULL;
 Solenoid* RobotMap::boxDraggersolenoidL = NULL;
 Compressor* RobotMap::pneumaticcomp = NULL;
-SpeedController* RobotMap::forkliftspeedControllerVertical = NULL;
 SpeedController* RobotMap::forkliftspeedControllerHorizontal = NULL;
 DigitalInput* RobotMap::forkliftlimitUp = NULL;
 DigitalInput* RobotMap::forkliftlimitDown = NULL;
@@ -53,6 +52,8 @@ void RobotMap::init() {
         driveTrainomnidrive->SetSensitivity(0.5);
         driveTrainomnidrive->SetMaxOutput(1.0);
 
+        driveTrainomnidrive->SetInvertedMotor(RobotDrive::kFrontRightMotor, true);
+        driveTrainomnidrive->SetInvertedMotor(RobotDrive::kRearRightMotor, true);
 	boxDraggersolenoidR = new Solenoid(1, 5);
 	lw->AddActuator("BoxDragger", "solenoidR", boxDraggersolenoidR);
 	
@@ -61,9 +62,6 @@ void RobotMap::init() {
 	
 	pneumaticcomp = new Compressor(1);
 	
-	
-	forkliftspeedControllerVertical = new Talon(6);
-	lw->AddActuator("Forklift", "speedControllerVertical", (Talon*) forkliftspeedControllerVertical);
 	
 	forkliftspeedControllerHorizontal = new Talon(5);
 	lw->AddActuator("Forklift", "speedControllerHorizontal", (Talon*) forkliftspeedControllerHorizontal);

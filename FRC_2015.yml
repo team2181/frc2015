@@ -90,7 +90,7 @@ Children:
         Left Front Motor Inverted: !!robotbuilder.data.properties.BooleanProperty {
           default: false, name: Left Front Motor Inverted, validators: null, value: false}
         Right Front Motor Inverted: !!robotbuilder.data.properties.BooleanProperty {
-          default: false, name: Right Front Motor Inverted, validators: null, value: false}
+          default: false, name: Right Front Motor Inverted, validators: null, value: true}
         Left Rear Motor: !!robotbuilder.data.properties.ChildSelectionProperty
           default: 1
           name: Left Rear Motor
@@ -98,7 +98,7 @@ Children:
           validators: [RobotDrive4, ChildDropdownSelected]
           value: DriveTrain speedcontrollerBL
         Right Rear Motor Inverted: !!robotbuilder.data.properties.BooleanProperty {
-          default: false, name: Right Rear Motor Inverted, validators: null, value: false}
+          default: false, name: Right Rear Motor Inverted, validators: null, value: true}
         Safety Expiration Time: !!robotbuilder.data.properties.DoubleProperty {default: 0.1,
           name: Safety Expiration Time, validators: null, value: 0.1}
         Left Rear Motor Inverted: !!robotbuilder.data.properties.BooleanProperty {
@@ -175,22 +175,6 @@ Children:
     Base: Subsystem
     Name: Pneumatic
   - Children:
-    - Children: []
-      Properties:
-        Type: !!robotbuilder.data.properties.ChoicesProperty
-          choices: *id001
-          default: Talon
-          name: Type
-          validators: null
-          value: Talon
-        Output Channel (PWM): !!robotbuilder.data.properties.ChoicesProperty
-          choices: *id002
-          default: '0'
-          name: Output Channel (PWM)
-          validators: *id003
-          value: '6'
-      Base: Speed Controller
-      Name: speedControllerVertical
     - Children: []
       Properties:
         Type: !!robotbuilder.data.properties.ChoicesProperty

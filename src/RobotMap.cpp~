@@ -53,6 +53,8 @@ void RobotMap::init() {
         driveTrainomnidrive->SetSensitivity(0.5);
         driveTrainomnidrive->SetMaxOutput(1.0);
 
+        driveTrainomnidrive->SetInvertedMotor(RobotDrive::kFrontRightMotor, true);
+        driveTrainomnidrive->SetInvertedMotor(RobotDrive::kRearRightMotor, true);
 	boxDraggersolenoidR = new Solenoid(1, 5);
 	lw->AddActuator("BoxDragger", "solenoidR", boxDraggersolenoidR);
 	

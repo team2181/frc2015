@@ -30,7 +30,6 @@ public:
 	static Solenoid* boxDraggersolenoidR;
 	static Solenoid* boxDraggersolenoidL;
 	static Compressor* pneumaticcomp;
-	static SpeedController* forkliftspeedControllerVertical;
 	static SpeedController* forkliftspeedControllerHorizontal;
 	static DigitalInput* forkliftlimitUp;
 	static DigitalInput* forkliftlimitDown;
