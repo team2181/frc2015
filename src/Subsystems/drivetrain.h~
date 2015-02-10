@@ -35,6 +35,7 @@ public:
 	DriveTrain();
 	void InitDefaultCommand();
 	void drive(Joystick *joy);
+	void autodrive(int x, int y, int z);
 };
 
 #endif

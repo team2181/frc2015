@@ -9,26 +9,20 @@
 // it from being updated in the future.
 
 
+
 #ifndef AUTONOMOUS_COMMAND_H
 #define AUTONOMOUS_COMMAND_H
 
-
-#include "Commands/Subsystem.h"
-#include "../Robot.h"
+#include "Commands/CommandGroup.h"
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class AutonomousCommand: public Command {
-public:
+class AutonomousCommand: public CommandGroup {
+public:	
 	AutonomousCommand();
-	virtual void Initialize();
-	virtual void Execute();
-	virtual bool IsFinished();
-	virtual void End();
-	virtual void Interrupted();
 };
 
 #endif

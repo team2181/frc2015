@@ -42,7 +42,7 @@ void Forklift::InitDefaultCommand() {
 // here. Call these from Commands.
 void Forklift::forkliftLoop(Joystick *joy)
 {
-	float y;
+	float z, y;
 	if ((joy->GetY() <= 0.2) && (joy->GetY() >= -0.2))
 	{
 		y = 0;
@@ -51,16 +51,32 @@ void Forklift::forkliftLoop(Joystick *joy)
 	{
 		y = joy->GetY();
 	}
-	if (PDP->GetCurrent(5) <= 2)
+	if ((joy->GetZ() <= 0.2) && (joy->GetZ() >= -0.2))
 	{
-		speedControllerHorizontal->Set(joy->GetZ());
+		z = 0;
+	}
+	else
+	{
+		z = joy->GetZ();
+	}
+	if (PDP->GetCurrent(5) <= SmartDashboard::GetNumber("Grabber Amp Limit"))
+	{
+		speedControllerHorizontal->Set(z);
 	}
 	else
 	{
 		speedControllerHorizontal->Set(0);
 		Wait(2);
 	}
-	speedControllerVertical->Set(y);
-	SmartDashboard::PutNumber("forklift vertical", y);
-	SmartDashboard::PutNumber("Grabber Amperage", PDP->GetCurrent(5));
+	if (speedControllerVertical->GetOutputCurrent() <= SmartDashboard::GetNumber("Lift Amp Limit"))
+	{
+		speedControllerVertical->Set(y);
+	}
+	else
+	{
+		speedControllerVertical->Set(0);
+		Wait(2);
+	}
+	SmartDashboard::PutNumber("Grabber Amp Out", PDP->GetCurrent(5));
+	SmartDashboard::PutNumber("Lift Amp Out", speedControllerVertical->GetOutputCurrent());
 }
