@@ -12,6 +12,9 @@
 
 #include "AutonomousCommand.h"
 
+#include "DriveBackCommand.h"
+#include "DriveForwardCommand.h"
+
 AutonomousCommand::AutonomousCommand() {
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());
@@ -29,4 +32,6 @@ AutonomousCommand::AutonomousCommand() {
 	// e.g. if Command1 requires chassis, and Command2 requires arm,
 	// a CommandGroup containing them would require both the chassis and the
 	// arm.
+	AddSequential(new DriveForwardCommand());
+	AddSequential(new DriveBackCommand());
 }

@@ -16,6 +16,8 @@
 #include "Commands/AutonomousCommand.h"
 #include "Commands/BoxDraggerDefaultCommand.h"
 #include "Commands/CompressorDefaultCommand.h"
+#include "Commands/DriveBackCommand.h"
+#include "Commands/DriveForwardCommand.h"
 #include "Commands/DriveTrainDefaultCommand.h"
 #include "Commands/ForkliftDefaultComand.h"
 
