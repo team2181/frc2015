@@ -27,7 +27,7 @@ void ForkliftDefaultComand::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void ForkliftDefaultComand::Execute() {
-	if (Robot::isTeleop)
+	if (RobotMap::isTeleop)
 	{
 	Robot::forklift->forkliftLoop(Robot::oi->getjoyAux());
 	}

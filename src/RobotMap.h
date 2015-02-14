@@ -38,6 +38,8 @@ public:
 	static CANTalon* forkliftspeedControllerVertical;
 	static PowerDistributionPanel* forkliftPDP;
 
+	static bool isTeleop;
+
 	static void init();
 };
 #endif
