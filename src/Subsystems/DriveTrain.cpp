@@ -71,3 +71,7 @@ void DriveTrain::autodrive(int x, int y, int z)
 {
 	omnidrive->MecanumDrive_Cartesian(x, y, z);
 }
+void DriveTrain::driveForward(bool b)
+{
+	omnidrive->MecanumDrive_Cartesian(0, 0.5, 0);
+}
