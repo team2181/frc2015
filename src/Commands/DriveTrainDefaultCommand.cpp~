@@ -27,7 +27,10 @@ void DriveTrainDefaultCommand::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void DriveTrainDefaultCommand::Execute() {
+	if (RobotMap::isTeleop)
+	{
 	Robot::driveTrain->drive(Robot::oi->getjoyDriver());
+	}
 }
 
 // Make this return true when this Command no longer needs to run execute()
