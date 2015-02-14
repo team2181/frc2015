@@ -35,7 +35,7 @@ public:
 	DriveTrain();
 	void InitDefaultCommand();
 	void drive(Joystick *joy);
-	void autodrive(int x, int y, int z);
+	void autodrive(float x, float y, float z);
 	void driveForward(bool b);
 };
 

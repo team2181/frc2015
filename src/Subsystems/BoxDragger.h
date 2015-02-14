@@ -32,6 +32,7 @@ public:
 	BoxDragger();
 	void InitDefaultCommand();
 	void setState(Joystick *joy);
+	void autoGrab();
 };
 
 #endif

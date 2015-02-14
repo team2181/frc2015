@@ -28,7 +28,7 @@ void DriveForwardCommand::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void DriveForwardCommand::Execute() {
-	Robot::driveTrain->autodrive(0,0.5,0);
+	Robot::driveTrain->autodrive(0,-0.5,0);
 }
 
 // Make this return true when this Command no longer needs to run execute()

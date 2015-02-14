@@ -51,7 +51,7 @@ void RobotMap::init() {
 	driveTrainomnidrive = new RobotDrive(driveTrainspeedcontrollerFL, driveTrainspeedcontrollerBL,
               driveTrainspeedcontrollerFR, driveTrainspeedcontrollerBR);
 	
-	driveTrainomnidrive->SetSafetyEnabled(true);
+	driveTrainomnidrive->SetSafetyEnabled(false);
         driveTrainomnidrive->SetExpiration(0.1);
         driveTrainomnidrive->SetSensitivity(0.5);
         driveTrainomnidrive->SetMaxOutput(1.0);

@@ -41,18 +41,23 @@ void BoxDragger::setState(Joystick *joy)
 {
 	if (joy->GetRawButton(6) && !(joy->GetRawButton(8)))
 	{
-		solenoidR->Set(false);
+		solenoidR->Set(true);
 	}
 	if (joy->GetRawButton(8) && !(joy->GetRawButton(6)))
 	{
-		solenoidR->Set(true);
+		solenoidR->Set(false);
 	}
 	if (joy->GetRawButton(5) && !(joy->GetRawButton(7)))
 	{
-		solenoidL->Set(false);
+		solenoidL->Set(true);
 	}
 	if (joy->GetRawButton(7) && !(joy->GetRawButton(5)))
 	{
-		solenoidL->Set(true);
+		solenoidL->Set(false);
 	}
+}
+void BoxDragger::autoGrab()
+{
+	solenoidR->Set(true);
+	solenoidL->Set(true);
 }

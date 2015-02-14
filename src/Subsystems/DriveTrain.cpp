@@ -67,7 +67,7 @@ void DriveTrain::drive(Joystick *joy)
 		speedcontrollerBL->Set(0.25);
 	}*/
 }
-void DriveTrain::autodrive(int x, int y, int z)
+void DriveTrain::autodrive(float x, float y, float z)
 {
 	omnidrive->MecanumDrive_Cartesian(x, y, z);
 }
