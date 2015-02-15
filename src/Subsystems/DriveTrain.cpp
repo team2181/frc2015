@@ -45,8 +45,8 @@ void DriveTrain::drive(Joystick *joy)
 {
 	double x,y,z;
 
-	x = pow(joy->GetX(),3);
-	y = pow(joy->GetY(),3);
+	x = pow(joy->GetX(),3)*0.75;
+	y = pow(joy->GetY(),3)*0.75;
 	z = (joy->GetZ()/2);
 	omnidrive->MecanumDrive_Cartesian(x, y, z);
 	SmartDashboard::PutNumber("Front Right", speedcontrollerFR->Get());

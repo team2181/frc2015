@@ -35,6 +35,6 @@ AutonomousCommand::AutonomousCommand() {
 	// a CommandGroup containing them would require both the chassis and the
 	// arm.
 	AddSequential(new BoxDraggerGrabCommand());
-	AddSequential(new WaitCommand(1.5));
+	AddSequential(new WaitCommand(1.2));
 	AddSequential(new DriveForwardCommand());
 }
